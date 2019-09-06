@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: betapp-group-svc
+  cloud:
+    config:
+      uri: http://localhost:8888
+  profiles:
+    active: production
+  datasource:
+    url: jdbc:mysql://${betapp-profile-svc.hostname}:${betapp-profile-svc.port}/${betapp-profile-svc.dbName}?useLegacyDatetimeCode=false&autoReconnect=true
+    username: ${betapp-profile-svc.username}
+    password: ${betapp-profile-svc.password}
+
