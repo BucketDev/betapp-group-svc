@@ -5,9 +5,9 @@ spring:
     config:
       uri: http://localhost:8888
   profiles:
-    active: production
+    active: default
   datasource:
-    url: jdbc:mysql://${betapp-profile-svc.hostname}:${betapp-profile-svc.port}/${betapp-profile-svc.dbName}?useLegacyDatetimeCode=false&autoReconnect=true
-    username: ${betapp-profile-svc.username}
-    password: ${betapp-profile-svc.password}
+    url: jdbc:mysql://${betapp-group-svc.hostname}:${betapp-group-svc.port}/${betapp-group-svc.dbName}?useLegacyDatetimeCode=false&autoReconnect=true
+    username: ${betapp-group-svc.username}
+    password: ${betapp-group-svc.password}
 
